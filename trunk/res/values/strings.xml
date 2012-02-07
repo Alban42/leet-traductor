@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">Leet Traductor</string>
+    
+    <string name="textorig">Text Original</string>
+    <string name="traductorTextLeet">Text/Leet</string>
+    <string name="traductorLeetText">Leet/Text</string>
+    <string name="texttraduit">Text Leet</string>
+    <string name="clear_all">Clear all</string>
+    <string name="clear_text">Clear orignal text</string>
+    <string name="clear_leet">Clear leet text</string>
+</resources>
