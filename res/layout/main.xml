@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/textorig"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layout_weight=".45"
+        android:gravity="top" >
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".10"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/traductorTextLeet"
+            android:textSize="10pt"
+            android:textStyle="bold"
+            android:typeface="sans"
+            android:textColor="#fff"
+            android:background="@drawable/btn_menu"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight=".50"
+            android:layout_alignParentLeft="true"
+            android:text="@+string/traductorTextLeet" />
+
+        <Button
+            android:id="@+id/traductorLeetText"
+            android:textSize="10pt"
+            android:textStyle="bold"
+            android:typeface="sans"
+            android:textColor="#fff"
+            android:background="@drawable/btn_menu"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight=".50"
+            android:layout_alignParentRight="true"
+            android:text="@+string/traductorLeetText" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/texttraduit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".45"
+        android:gravity="top" >
+    </EditText>
+
+</LinearLayout>
