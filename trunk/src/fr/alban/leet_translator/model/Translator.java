@@ -1,19 +1,22 @@
 /**
  * 
  */
-package fr.alban.leet_traductor.model;
+package fr.alban.leet_translator.model;
 
 import java.util.ArrayList;
 
 /**
- * @author Alban
+ * Translator class.
+ * 
+ * @author Alban Menager
+ * @author alban.menager{at}gmail.com
  * 
  */
-public class Traductor {
+public class Translator {
 
 	private ArrayList<CoupleCorrespondance> tableauCorrespondance;
 
-	public Traductor() {
+	public Translator() {
 		tableauCorrespondance = new ArrayList<CoupleCorrespondance>();
 
 		tableauCorrespondance.add(new CoupleCorrespondance('a', new String[] {
@@ -79,6 +82,13 @@ public class Traductor {
 				"=/=", "7_", "~/_", "%", ">_", ">_", "-\\_", "'/_" }));
 	}
 
+	/**
+	 * Translate the text into leet.
+	 * 
+	 * @param text
+	 *            the text to translate.
+	 * @return the string containing the translated text.
+	 */
 	public String traduireTextVersLeet(String text) {
 		String resultat = "";
 
@@ -93,6 +103,13 @@ public class Traductor {
 		return resultat;
 	}
 
+	/**
+	 * Translate the leet into text.
+	 * 
+	 * @param leet
+	 *            the text to translate.
+	 * @return the string containing the translated text.
+	 */
 	public String traduireLeetVersText(String leet) {
 		String resultat = "";
 		String buffer = "";
@@ -122,6 +139,13 @@ public class Traductor {
 		return resultat;
 	}
 
+	/**
+	 * Return the cleet correspondence for the text character in parameter.
+	 * 
+	 * @param caractereText
+	 *            the character to translate.
+	 * @return the leet correspondence.
+	 */
 	private String correspondanceLeet(char caractereText) {
 		String resultat = "";
 		caractereText = Character.toLowerCase(caractereText);
@@ -131,6 +155,12 @@ public class Traductor {
 		return resultat;
 	}
 
+	/**
+	 * Return the text correspondence for the leet character.
+	 * 
+	 * @param caractereLeet the leet character to translate.
+	 * @return the text correspondence.
+	 */
 	private char correspondanceText(String caractereLeet) {
 		char resultat = ' ';
 
@@ -141,6 +171,13 @@ public class Traductor {
 		return resultat;
 	}
 
+	/**
+	 * Return the cleet correspondence for the text character in parameter.
+	 * 
+	 * @param caractereText
+	 *            the character to translate.
+	 * @return the leet correspondence.
+	 */
 	private CoupleCorrespondance findText(String caractereLeet) {
 
 		CoupleCorrespondance couple = null;
@@ -156,6 +193,12 @@ public class Traductor {
 		return couple;
 	}
 
+	/**
+	 * Return the text correspondence for the leet character.
+	 * 
+	 * @param caractereLeet the leet character to translate.
+	 * @return the text correspondence.
+	 */
 	private CoupleCorrespondance findLeet(char caractereText) {
 
 		CoupleCorrespondance couple = null;

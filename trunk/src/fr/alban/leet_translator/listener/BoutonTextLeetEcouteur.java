@@ -1,17 +1,23 @@
-package fr.alban.leet_traductor.listener;
+package fr.alban.leet_translator.listener;
 
-import fr.alban.leet_traductor.model.Traductor;
+import fr.alban.leet_translator.model.Translator;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 
+/**
+ * Listener class for the Text to leet button.
+ * 
+ * @author Alban Menager
+ * @author alban.menager{at}gmail.com
+ */
 public class BoutonTextLeetEcouteur implements OnClickListener{
 	
 	private EditText textOriginal;
 	private EditText textLeet;
-	private Traductor traducteur;
+	private Translator traducteur;
 	
-	public BoutonTextLeetEcouteur(Traductor traducteur, EditText textOriginal, EditText textLeet){
+	public BoutonTextLeetEcouteur(Translator traducteur, EditText textOriginal, EditText textLeet){
 		this.traducteur = traducteur;
 		this.textOriginal = textOriginal;
 		this.textLeet = textLeet;
